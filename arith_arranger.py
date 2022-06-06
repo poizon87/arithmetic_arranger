@@ -27,7 +27,7 @@ def arithmetic_arranger(args):
         num2 = prob[2]
 
         print(num1,op,num2) #for some reason if a number is too long it will print the previous numbers
-                            #then it will print the error message
+                            #then it will print the error message, why is this?
 
 if __name__ == '__main__':
     main()
