@@ -22,11 +22,20 @@ def arithmetic_arranger(args):
                 print("Error: Numbers cannot be more than four digits.")
                 return
 
-        num1 = prob[0]
-        op = prob[1]
-        num2 = prob[2]
+        for digit in prob[0]:
+            if digit.isdigit() == False:
+                print('Error: Numbers must only contain digits.')
+                return
+        for digit in prob[2]:
+            if digit.isdigit() == False:
+                print('Error: Numbers must only contain digits.')
+                return
 
-        print(num1,op,num2) #for some reason if a number is too long it will print the previous numbers
+        num1 = int(prob[0])
+        op = prob[1]
+        num2 = int(prob[2])
+
+        print(f'{num1}\n{op} {num2}') #for some reason if a number is too long it will print the previous numbers
                             #then it will print the error message, why is this?
 
 if __name__ == '__main__':
