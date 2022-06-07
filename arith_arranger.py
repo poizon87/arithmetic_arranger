@@ -35,8 +35,8 @@ def arithmetic_arranger(args):
         op = prob[1]
         num2 = int(prob[2])
 
-        print(f'{num1}\n{op} {num2}') #for some reason if a number is too long it will print the previous numbers
-                            #then it will print the error message, why is this?
+        right_align = (f"{num1: >5}\n{op} {num2: >3}")
+        print(right_align)
 
 if __name__ == '__main__':
     main()
