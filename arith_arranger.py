@@ -7,8 +7,9 @@ def arithmetic_arranger(args):
 
     first_numbers = ''
     second_numbers = ''
-    length1 = 0    #make this dynamic by getting length of longest item in prob
-    length2 = 0
+    length1 = 0
+    dashes = ''
+
     if len(args) > 5:
         print('Error: Too many problems.')
         return
@@ -20,7 +21,8 @@ def arithmetic_arranger(args):
     for problem in args:
         prob = problem.split()
         length1 = max(len(number) for number in prob)
-
+        for number in prob:
+            dash = '-'*(length1 + 2) + '    '
         for number in prob:
             if len(number) > 4:
                 print("Error: Numbers cannot be more than four digits.")
@@ -37,22 +39,18 @@ def arithmetic_arranger(args):
 
         num1 = str(prob[0])
         op = str(prob[1])
-
         num2 = str(prob[2])
-
-
 
         correct1 = f"{num1: >{length1 + 2}}" + '    '
         correct2 = op + ' ' + f"{num2: >{length1}}" + '    '
 
-
-
-
         first_numbers += correct1
         second_numbers += correct2
+        dashes += dash
 
     print(first_numbers)
     print(second_numbers)
+    print(dashes)
 
 if __name__ == '__main__':
     main()
