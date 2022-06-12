@@ -1,3 +1,4 @@
 # arithmetic_arranger
  
-testing 123
+Arranges arithmetic problems vertically and side by side for handwritten calculations.
+completed
